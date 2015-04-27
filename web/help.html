@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+
+            <a href="login.jsp" class="btn btn-info" role="button">Log In</a>
+            <a href="register.jsp" class="btn btn-info" role="button">Register</a>
+            <a href="help.html" class="btn btn-info" role="button">Help</a>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Submit Problem</h3>
+                </div>
+                <div class="panel-body">
+
+                    <p>Please submit the type of error to help us track any system issuses that can arise.</p>
+                    <p>Please Select the nature of the Problem from the list below</p>                                          
+
+                    <form action="sendProblem.jsp" method="post">
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" name="fromEmail" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Name</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Type of Account</label>
+                            <br>
+                            <input type="radio" name="type" value="student" checked>Student
+                            <br>
+                            <input type="radio" name="type" value="lecturer">Lecturer
+                        </div>
+                        
+                        <div class ="form-group">
+                            <label for="user_type">Select your role in the college</label>
+                            <select class="form-control" name="problem">
+                                <option value="website_down">Website Down?</option>
+                                <option value="bad_navigation">Poor Website Navigation</option>
+                                <option value="wrong_browser">Using a Non-recommended browser</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <textarea name="message" rows="10" cols="80" placeholder="Please Enter your error text here"></textarea>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+            <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Copyright notice - Group 6</p>
+      </div>
+    </footer>
+    </body>
+</html>
